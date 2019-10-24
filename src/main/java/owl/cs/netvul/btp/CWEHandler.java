@@ -49,6 +49,8 @@ class CWEHandler extends DefaultHandler{
 		} catch (OWLOntologyCreationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			man.clearOntologies();
+			System.exit(1);
 		}
 		cap = df.getOWLClass(ir+"#CWE");
 		op = df.getOWLObjectProperty(ir+"#hasCWE");
@@ -61,7 +63,7 @@ class CWEHandler extends DefaultHandler{
 	public void startElement(String uri,String localName,String qName,Attributes attributes) throws SAXException{
 		if(qName.equalsIgnoreCase("Weakness")) {
 			String name = attributes.getValue("Name");
-			String id = attributes.getValue("id");
+			String id = attributes.getValue("ID");
 			
 			OWLNamedIndividual i = df.getOWLNamedIndividual(ir+"#CWE-"+id);
 			n = df.getOWLNamedIndividual(ir+"#WK_"+name);
@@ -85,7 +87,7 @@ class CWEHandler extends DefaultHandler{
 			isRelAtk=true;
 		}
 		else if(qName.equalsIgnoreCase("Related_Attack_pattern") && isRelAtk) {
-			String aid = "CAPEC_ID="+attributes.getValue("CAPEC_ID");
+			String aid = attributes.getValue("CAPEC_ID");
 			OWLNamedIndividual rw = df.getOWLNamedIndividual(ir+"#CAPEC-"+aid);
 			if(!o.containsIndividualInSignature(rw.getIRI())) {
 				OWLClass cap = df.getOWLClass(ir+"#CAPEC");
@@ -129,6 +131,8 @@ class CWEHandler extends DefaultHandler{
 			} catch (OWLOntologyStorageException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				man.clearOntologies();
+				System.exit(1);
 			}
 		}
 		else if(qName.equalsIgnoreCase("weaknesses")) {

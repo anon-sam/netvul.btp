@@ -49,6 +49,8 @@ class CAPECHandler extends DefaultHandler{
 		} catch (OWLOntologyCreationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			man.clearOntologies();
+			System.exit(1);
 		}
 		atk = df.getOWLClass(ir+"#Attack");
 		cap = df.getOWLClass(ir+"#CAPEC");
@@ -108,6 +110,8 @@ class CAPECHandler extends DefaultHandler{
 			} catch (OWLOntologyStorageException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				man.clearOntologies();
+				System.exit(1);
 			}
 		}
 		else if(qName.equalsIgnoreCase("attack_patterns")) {
