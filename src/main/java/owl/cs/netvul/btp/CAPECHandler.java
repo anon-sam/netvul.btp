@@ -27,6 +27,9 @@ class CAPECHandler extends DefaultHandler{
 	OWLOntology o;
 	OWLDataFactory df;
 	OWLNamedIndividual n;
+	OWLClass atk;
+	OWLClass cap;
+	OWLObjectProperty op;
 	IRI ir;
 	
 	boolean isRelAtk = false;
@@ -39,13 +42,17 @@ class CAPECHandler extends DefaultHandler{
 		//ir=IRI.create(f);
 		man =  OWLManager.createOWLOntologyManager();
 		df= man.getOWLDataFactory();
+
 		try {
 			o = man.loadOntologyFromOntologyDocument(f);
 			ir=o.getOntologyID().getOntologyIRI().get();
 		} catch (OWLOntologyCreationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}			
+		}
+		atk = df.getOWLClass(ir+"#Attack");
+		cap = df.getOWLClass(ir+"#CAPEC");
+		op = df.getOWLObjectProperty(ir+"#hasCAPEC");
 	}
 	
 	@Override
@@ -53,11 +60,11 @@ class CAPECHandler extends DefaultHandler{
 		if(qName.equalsIgnoreCase("Attack_Pattern")) {
 			String name = attributes.getValue("Name");
 			String id = attributes.getValue("ID");
-			OWLObjectProperty op = df.getOWLObjectProperty(ir+"#hasCAPEC");
-			OWLNamedIndividual i = df.getOWLNamedIndividual(ir+"#CAPEC_ID="+id);
+			
+			OWLNamedIndividual i = df.getOWLNamedIndividual(ir+"#CAPEC-"+id);
 			n = df.getOWLNamedIndividual(ir+"#ATK_"+name);
 			if(!o.containsIndividualInSignature(n.getIRI())) {
-				OWLClass atk = df.getOWLClass(ir+"#Attack");
+				
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(atk, n);
 				OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral("https://capec.mitre.org/data/definitions/+"+id+".html"));
 				OWLAnnotationAssertionAxiom uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
@@ -65,7 +72,7 @@ class CAPECHandler extends DefaultHandler{
 				man.addAxiom(o, uratk);
 			}
 			if(!o.containsIndividualInSignature(i.getIRI())) {
-				OWLClass cap = df.getOWLClass(ir+"#CAPEC");
+				
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(cap, i);
 				man.addAxiom(o, at);
 			}
@@ -78,9 +85,9 @@ class CAPECHandler extends DefaultHandler{
 		else if(qName.equalsIgnoreCase("Related_Attack_pattern") && isRelAtk) {
 			String aid = attributes.getValue("CAPEC_ID");
 			String nature = attributes.getValue("Nature");
-			OWLNamedIndividual rw = df.getOWLNamedIndividual(ir+"#CAPEC_ID="+aid);
+			OWLNamedIndividual rw = df.getOWLNamedIndividual(ir+"#CAPEC-"+aid);
 			if(!o.containsIndividualInSignature(rw.getIRI())) {
-				OWLClass cap = df.getOWLClass(ir+"#CAPEC");
+				
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(cap, rw);
 				man.addAxiom(o, at);
 			}

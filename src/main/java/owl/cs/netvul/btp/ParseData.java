@@ -14,6 +14,7 @@ class ParseData {
 		ParseData pd=new ParseData();
 		pd.parseCAPEC();
 		pd.parseCWE();
+		//pd.parseCVE();
 	}
 	
 	public void parseCWE() {
@@ -49,4 +50,9 @@ class ParseData {
 			e.printStackTrace();
 		}
 	}
+	
+	//public void parseCVE() {
+		//CVEParser cvp = new CVEParser();
+		//cvp.parse();
+	//}
 }

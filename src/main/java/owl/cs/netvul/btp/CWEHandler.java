@@ -26,6 +26,9 @@ class CWEHandler extends DefaultHandler{
 	OWLOntology o;
 	OWLDataFactory df;
 	OWLNamedIndividual n;
+	OWLClass cap;
+	OWLObjectProperty op;
+	OWLClass atk;
 	IRI ir;
 	
 	boolean isRelAtk = false;
@@ -39,6 +42,7 @@ class CWEHandler extends DefaultHandler{
 		//ir=IRI.create(f);
 		man =  OWLManager.createOWLOntologyManager();
 		df= man.getOWLDataFactory();
+
 		try {
 			o = man.loadOntologyFromOntologyDocument(f);
 			ir=o.getOntologyID().getOntologyIRI().get();
@@ -46,6 +50,9 @@ class CWEHandler extends DefaultHandler{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		cap = df.getOWLClass(ir+"#CWE");
+		op = df.getOWLObjectProperty(ir+"#hasCWE");
+		atk = df.getOWLClass(ir+"#Weakness");
 	}
 
 	
@@ -55,11 +62,11 @@ class CWEHandler extends DefaultHandler{
 		if(qName.equalsIgnoreCase("Weakness")) {
 			String name = attributes.getValue("Name");
 			String id = attributes.getValue("id");
-			OWLObjectProperty op = df.getOWLObjectProperty(ir+"#hasCWE");
-			OWLNamedIndividual i = df.getOWLNamedIndividual(ir+"#CWE_ID="+id);
+			
+			OWLNamedIndividual i = df.getOWLNamedIndividual(ir+"#CWE-"+id);
 			n = df.getOWLNamedIndividual(ir+"#WK_"+name);
 			if(!o.containsIndividualInSignature(n.getIRI())) {
-				OWLClass atk = df.getOWLClass(ir+"#Weakness");
+				
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(atk, n);
 				OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral("https://cwe.mitre.org/data/definitions/+"+id+".html"));
 				OWLAnnotationAssertionAxiom uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
@@ -79,7 +86,7 @@ class CWEHandler extends DefaultHandler{
 		}
 		else if(qName.equalsIgnoreCase("Related_Attack_pattern") && isRelAtk) {
 			String aid = "CAPEC_ID="+attributes.getValue("CAPEC_ID");
-			OWLNamedIndividual rw = df.getOWLNamedIndividual(ir+"#CAPEC_ID="+aid);
+			OWLNamedIndividual rw = df.getOWLNamedIndividual(ir+"#CAPEC-"+aid);
 			if(!o.containsIndividualInSignature(rw.getIRI())) {
 				OWLClass cap = df.getOWLClass(ir+"#CAPEC");
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(cap, rw);
@@ -95,9 +102,9 @@ class CWEHandler extends DefaultHandler{
 		else if(qName.equalsIgnoreCase("related_weakness")&&isRelWeakness) {
 			String aid = attributes.getValue("CWE_ID");
 			String nature = attributes.getValue("Nature");
-			OWLNamedIndividual rw = df.getOWLNamedIndividual(ir+"#CWE_ID="+aid);
+			OWLNamedIndividual rw = df.getOWLNamedIndividual(ir+"#CWE-"+aid);
 			if(!o.containsIndividualInSignature(rw.getIRI())) {
-				OWLClass cap = df.getOWLClass(ir+"#CWE");
+				
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(cap, rw);
 				man.addAxiom(o, at);
 			}
