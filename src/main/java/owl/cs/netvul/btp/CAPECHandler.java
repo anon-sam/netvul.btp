@@ -68,7 +68,7 @@ class CAPECHandler extends DefaultHandler{
 			if(!o.containsIndividualInSignature(n.getIRI())) {
 				
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(atk, n);
-				OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral("https://capec.mitre.org/data/definitions/+"+id+".html"));
+				OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral("https://capec.mitre.org/data/definitions/"+id+".html"));
 				OWLAnnotationAssertionAxiom uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
 				man.addAxiom(o, at);
 				man.addAxiom(o, uratk);
