@@ -83,12 +83,14 @@ public class CVEParser {
 			es.execute(new Runnable() {
 				public void run() {
 					OWLNamedIndividual n=null;
-					OWLNamedIndividual wk=null;
-					OWLClassAssertionAxiom vcv=null;
-					OWLObjectPropertyAssertionAxiom cs=null;
-					OWLAnnotation ur=null;
-					OWLAnnotationAssertionAxiom uratk=null;
+					//OWLNamedIndividual wk=null;
+					//OWLClassAssertionAxiom vcv=null;
+					//OWLObjectPropertyAssertionAxiom cs=null;
+					//OWLAnnotation ur=null;
+					//OWLAnnotationAssertionAxiom uratk=null;
 					//ClassLoader cl = ClassLoader.getSystemClassLoader();
+					String wkname=null;
+					String annotname=null;
 					String cwfn;
 					synchronized(A) {
 						cwfn = this.getClass().getClassLoader().getResource("nvd/nvdcve-1.1-"+A.get(k).toString()+".json").getFile();
@@ -118,7 +120,7 @@ public class CVEParser {
 									jst= parser.nextToken();
 									String vname = parser.getValueAsString();
 									n = df.getOWLNamedIndividual(ir+"#"+vname);
-									vcv = df.getOWLClassAssertionAxiom(vul, n);
+									//vcv = df.getOWLClassAssertionAxiom(vul, n);
 									//synchronized(man){
 									//	man.addAxiom(o, vcv);
 									//}
@@ -138,8 +140,9 @@ public class CVEParser {
 										sv=false;
 										continue;
 									}
-									wk = df.getOWLNamedIndividual(ir+"#"+parser.getValueAsString());
-									cs = df.getOWLObjectPropertyAssertionAxiom(caus, n, wk);
+									wkname=parser.getValueAsString();
+									//wk = df.getOWLNamedIndividual(ir+"#"+parser.getValueAsString());
+									//cs = df.getOWLObjectPropertyAssertionAxiom(caus, n, wk);
 									//synchronized(man) {
 									//	man.addAxiom(o, cs);
 									//}
@@ -153,8 +156,9 @@ public class CVEParser {
 										}
 										if(jsin!=null && "url".equals(jsin)) {
 											jst= parser.nextToken();
-											ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(parser.getValueAsString()));
-											uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
+											annotname=parser.getValueAsString();
+											//ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(parser.getValueAsString()));
+											//uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
 										//	synchronized(man) {
 											//	man.addAxiom(o, uratk);
 											//}
@@ -166,6 +170,11 @@ public class CVEParser {
 							}
 							if(sv) {
 								try {
+									OWLClassAssertionAxiom vcv = df.getOWLClassAssertionAxiom(vul, n);
+									OWLNamedIndividual wk = df.getOWLNamedIndividual(ir+"#"+wkname);
+									OWLObjectPropertyAssertionAxiom cs = df.getOWLObjectPropertyAssertionAxiom(caus, n, wk);
+									OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(annotname));
+									OWLAnnotationAssertionAxiom uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
 									synchronized(man) {
 										man.addAxiom(o, vcv);
 										man.addAxiom(o, cs);
