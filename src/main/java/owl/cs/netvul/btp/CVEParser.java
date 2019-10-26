@@ -83,6 +83,11 @@ public class CVEParser {
 			es.execute(new Runnable() {
 				public void run() {
 					OWLNamedIndividual n=null;
+					OWLNamedIndividual wk=null;
+					OWLClassAssertionAxiom vcv=null;
+					OWLObjectPropertyAssertionAxiom cs=null;
+					OWLAnnotation ur=null;
+					OWLAnnotationAssertionAxiom uratk=null;
 					//ClassLoader cl = ClassLoader.getSystemClassLoader();
 					String cwfn;
 					synchronized(A) {
@@ -95,6 +100,7 @@ public class CVEParser {
 						File f= new File(cwfn);
 						parser  = factory.createParser(f);
 						//ExecutorService asynwrit = Executors.newCachedThreadPool();
+						
 						while(!parser.isClosed()) {
 							JsonToken jst = parser.nextToken();
 							boolean sv = false;
@@ -112,14 +118,14 @@ public class CVEParser {
 									jst= parser.nextToken();
 									String vname = parser.getValueAsString();
 									n = df.getOWLNamedIndividual(ir+"#"+vname);
-									OWLClassAssertionAxiom vcv = df.getOWLClassAssertionAxiom(vul, n);
-									synchronized(man){
-										man.addAxiom(o, vcv);
-									}
+									vcv = df.getOWLClassAssertionAxiom(vul, n);
+									//synchronized(man){
+									//	man.addAxiom(o, vcv);
+									//}
 									//System.out.println(parser.getValueAsString());
 									//return;
 								}
-								else if(fname.equals("problemtype")) {
+								else if(sv&&fname.equals("problemtype")) {
 									String jsin=null;
 									do {
 										jst = parser.nextToken();
@@ -128,13 +134,17 @@ public class CVEParser {
 										}
 									}while(jsin==null || !"value".equals(jsin));
 									jst= parser.nextToken();
-									OWLNamedIndividual wk = df.getOWLNamedIndividual(ir+"#"+parser.getValueAsString());
-									OWLObjectPropertyAssertionAxiom cs = df.getOWLObjectPropertyAssertionAxiom(caus, n, wk);
-									synchronized(man) {
-										man.addAxiom(o, cs);
+									if(!(parser.getValueAsString().startsWith("CWE-") || parser.getValueAsString().startsWith("NVD"))) {
+										sv=false;
+										continue;
 									}
+									wk = df.getOWLNamedIndividual(ir+"#"+parser.getValueAsString());
+									cs = df.getOWLObjectPropertyAssertionAxiom(caus, n, wk);
+									//synchronized(man) {
+									//	man.addAxiom(o, cs);
+									//}
 								}
-								else if(fname.equals("references")) {
+								else if(sv&&fname.equals("references")) {
 									String jsin=null;
 									do {
 										jst = parser.nextToken();
@@ -143,11 +153,11 @@ public class CVEParser {
 										}
 										if(jsin!=null && "url".equals(jsin)) {
 											jst= parser.nextToken();
-											OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(parser.getValueAsString()));
-											OWLAnnotationAssertionAxiom uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
-											synchronized(man) {
-												man.addAxiom(o, uratk);
-											}
+											ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(parser.getValueAsString()));
+											uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
+										//	synchronized(man) {
+											//	man.addAxiom(o, uratk);
+											//}
 										}
 							
 									}while(jsin==null || !"description".equals(jsin));
@@ -157,6 +167,9 @@ public class CVEParser {
 							if(sv) {
 								try {
 									synchronized(man) {
+										man.addAxiom(o, vcv);
+										man.addAxiom(o, cs);
+										man.addAxiom(o, uratk);
 										man.saveOntology(o);
 									}
 								} catch (OWLOntologyStorageException e) {
