@@ -89,8 +89,8 @@ public class CVEParser {
 					//OWLAnnotation ur=null;
 					//OWLAnnotationAssertionAxiom uratk=null;
 					//ClassLoader cl = ClassLoader.getSystemClassLoader();
-					String wkname=null;
-					String annotname=null;
+					String wkname="";
+					String annotname="";
 					String cwfn;
 					synchronized(A) {
 						cwfn = this.getClass().getClassLoader().getResource("nvd/nvdcve-1.1-"+A.get(k).toString()+".json").getFile();
