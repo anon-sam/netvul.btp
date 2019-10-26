@@ -83,10 +83,10 @@ public class CVEParser {
 			es.execute(new Runnable() {
 				public void run() {
 					OWLNamedIndividual n=null;
-					ClassLoader cl = ClassLoader.getSystemClassLoader();
+					//ClassLoader cl = ClassLoader.getSystemClassLoader();
 					String cwfn;
 					synchronized(A) {
-						cwfn = cl.getResource("nvd/nvdcve-1.1-"+A.get(k).toString()+".json").getFile();
+						cwfn = this.getClass().getClassLoader().getResource("nvd/nvdcve-1.1-"+A.get(k).toString()+".json").getFile();
 						k++;
 					}
 					JsonFactory factory = new JsonFactory();
