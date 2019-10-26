@@ -35,8 +35,8 @@ class CAPECHandler extends DefaultHandler{
 	boolean isRelAtk = false;
 	
 	public CAPECHandler() {
-		ClassLoader cl = ClassLoader.getSystemClassLoader();
-		URL nv = cl.getResource("nval.owl");
+		//ClassLoader cl = ClassLoader.getSystemClassLoader();
+		URL nv = CAPECHandler.class.getClassLoader().getResource("nval.owl");
 		//System.out.println(nv);
 		File f = new File(nv.getFile());
 		//ir=IRI.create(f);

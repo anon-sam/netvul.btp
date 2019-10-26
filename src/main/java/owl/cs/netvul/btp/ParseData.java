@@ -22,8 +22,8 @@ class ParseData {
 		try {
 			SAXParser saxParser = saxParserFactory.newSAXParser();
 			CWEHandler cwhand = new CWEHandler();
-			ClassLoader cl = ClassLoader.getSystemClassLoader();
-			String cw = cl.getResource("1000.xml").toString();
+			//ClassLoader cl = ClassLoader.getSystemClassLoader();
+			String cw = this.getClass().getClassLoader().getResource("1000.xml").toString();
 			saxParser.parse(cw, cwhand);
 		}catch (ParserConfigurationException e) {
 	        e.printStackTrace();
@@ -39,8 +39,8 @@ class ParseData {
 		try {
 			SAXParser saxParser = saxParserFactory.newSAXParser();
 			CAPECHandler cphand = new CAPECHandler();
-			ClassLoader cl = ClassLoader.getSystemClassLoader();
-			String cw = cl.getResource("3000.xml").toString();
+			//ClassLoader cl = ClassLoader.getSystemClassLoader();
+			String cw = this.getClass().getClassLoader().getResource("3000.xml").toString();
 			saxParser.parse(cw, cphand);
 		}catch (ParserConfigurationException e) {
 	        e.printStackTrace();

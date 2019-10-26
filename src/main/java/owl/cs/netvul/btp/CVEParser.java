@@ -50,8 +50,8 @@ public class CVEParser {
 	}
 	
 	public CVEParser() {
-		ClassLoader cl = ClassLoader.getSystemClassLoader();
-		URL nv = cl.getResource("nval.owl");
+		//ClassLoader cl = ClassLoader.getSystemClassLoader();
+		URL nv = CVEParser.class.getClassLoader().getResource("nval.owl");
 		//System.out.println(nv);
 		File f = new File(nv.getFile());
 		//ir=IRI.create(f);
