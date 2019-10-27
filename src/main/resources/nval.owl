@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#"
-     xml:base="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10"
+<rdf:RDF xmlns="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#"
+     xml:base="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:nval="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#"
      xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval"/>
     
 
 
@@ -43,259 +44,259 @@
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanAlsoBe -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CanAlsoBe -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanAlsoBe">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#PeerOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CanAlsoBe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#PeerOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanFollow -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CanFollow -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanFollow">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CanFollow">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CanPrecede"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CanPrecede -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CanPrecede">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ChildOf -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#ChildOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ChildOf">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ParentOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#ChildOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#ParentOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#NetworkHasHost -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#NetworkHasHost -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#NetworkHasHost">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#NetworkHasHost">
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#NetworkHasHost"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#NetworkHasHost"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Network"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#NetworkHasHost"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#NetworkHasHost"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Host"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ParentOf -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#ParentOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ParentOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#ParentOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#PeerOf -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#PeerOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#PeerOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#PeerOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causedBy -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#causedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causedBy">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causes"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#causedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#causes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causes -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#causes -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causes"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#causes"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#createsWeakness -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#createsWeakness -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#createsWeakness">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#createsWeakness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#exploitedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#exploitedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasCAPEC -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasCAPEC">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasCWE -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasCWE">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasComponent -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasComponent -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasComponent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Component"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasComponent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Host"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Component"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasIndirectVulnerability -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasIndirectVulnerability">
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasIndirectVulnerability"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Host"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasIndirectVulnerability"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Network"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasIndirectVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasVulnerability -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Component"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasVulnerability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Component"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasVulnerability"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Host"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasVulnerability"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Network"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#hasVulnerability"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#leadsTo -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#leadsTo -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#leadsTo">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#leadsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#preConditionTo -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#preConditionTo -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#preConditionTo">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#preConditionTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providedBy -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#providedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providedBy">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providesService"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#providedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#providesService"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providesService -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#providesService -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providesService">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#providesService">
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providesService"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#providesService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Network"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providesService"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#providesService"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Service"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Service"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
@@ -313,2039 +314,65 @@
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Attack"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CAPEC"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#CWE"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Component -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Component -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Component"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Component"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Host -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Host"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Network -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Network"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Service -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Service -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Service"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Service"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#VulnerableService -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#VulnerableService -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#VulnerableService">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Service"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#VulnerableService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Service"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness -->
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Rules
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v1">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#h">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#s">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exploitCAPEC</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAtkPre</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAtkChld</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ChildOf"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ChildOf"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAtkPar</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ParentOf"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ParentOf"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAtkPr</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#PeerOf"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#PeerOf"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weaknessCreation</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#createsWeakness"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weaknessCreationW</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#createsWeakness"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w2"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CausWE</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causedBy"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causedBy"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWkCAB</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanAlsoBe"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanAlsoBe"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWkPre</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanPrecede"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWkChld</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ChildOf"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ChildOf"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChainVulnerable2</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#preConditionTo"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#leadsTo"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CwkPar</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ParentOf"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#ParentOf"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWkPr</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CWE"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCWE"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#PeerOf"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#PeerOf"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VulnHost</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#h"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Component"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasComponent"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#h"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#h"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VulnNetwork</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Host"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#h"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#NetworkHasHost"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#h"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#h"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VulnService</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Service"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#s"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#providesService"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#s"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#VulnerableService"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChainVulnerable</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Network"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasVulnerability"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#preConditionTo"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#leadsTo"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasIndirectVulnerability"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#n"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">postConditionRule</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causedBy"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#createsWeakness"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#leadsTo"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">preconditionRule</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Vulnerability"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Weakness"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#causedBy"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v1"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#exploitedBy"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#w1"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#preConditionTo"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#v1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAtkCAB</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanAlsoBe"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanAlsoBe"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAtkFol</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CAPEC"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#Attack"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#hasCAPEC"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanFollow"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#c"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#CanFollow"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a1"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/untitled-ontology-10#a2"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
+    <owl:Class rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Weakness"/>
 </rdf:RDF>
 
 
