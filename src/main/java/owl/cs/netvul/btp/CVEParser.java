@@ -125,14 +125,63 @@ public class CVEParser {
 									jst= parser.nextToken();
 									String vname = parser.getValueAsString();
 									n = df.getOWLNamedIndividual(ir+"#"+vname);
-									//vcv = df.getOWLClassAssertionAxiom(vul, n);
-									//synchronized(man){
-									//	man.addAxiom(o, vcv);
-									//}
-									//System.out.println(parser.getValueAsString());
-									//return;
+									
+									
+									
+									do {
+										jst = parser.nextToken();
+										if(JsonToken.FIELD_NAME.equals(jst)) {
+											jsin = parser.getCurrentName();
+										}
+									}while(jsin ==null || !"problemtype".equals(jsin));
+									
+									
+									do {
+										jst = parser.nextToken();
+										if(JsonToken.FIELD_NAME.equals(jst)) {
+											jsin = parser.getCurrentName();
+										}
+									}while(jsin==null || !"value".equals(jsin));
+									jst= parser.nextToken();
+									if(!(parser.getValueAsString().startsWith("CWE-") || parser.getValueAsString().startsWith("NVD"))) {
+										String jsoin=null;
+										do {
+											jst=parser.nextToken();
+											if(JsonToken.FIELD_NAME.equals(jst)) {
+												jsoin=parser.getCurrentName();
+											}
+										}while(jsoin==null || !"description".equals(jsoin));
+										sv=false;
+										continue;
+									}
+									wkname=parser.getValueAsString();
+									
+									
+									
+									
+									do {
+										jst = parser.nextToken();
+										if(JsonToken.FIELD_NAME.equals(jst)) {
+											jsin = parser.getCurrentName();
+										}
+									}while(jsin==null || !"references".equals(jsin));
+									
+									do {
+										jst = parser.nextToken();
+										if(JsonToken.FIELD_NAME.equals(jst)) {
+											jsin = parser.getCurrentName();
+										}
+										if(jsin!=null && "url".equals(jsin)) {
+											jst= parser.nextToken();
+											annotname=parser.getValueAsString();
+										
+										}
+							
+									}while(jsin==null || !"description".equals(jsin));
+									
 								}
-								else if(fname.equals("problemtype")) {
+								/*else if(fname.equals("problemtype")) {
+									sv=true;
 									String jsin=null;
 									do {
 										jst = parser.nextToken();
@@ -160,6 +209,7 @@ public class CVEParser {
 									//}
 								}
 								else if(fname.equals("references")) {
+									sv=true;
 									String jsin=null;
 									do {
 										jst = parser.nextToken();
@@ -178,7 +228,7 @@ public class CVEParser {
 							
 									}while(jsin==null || !"description".equals(jsin));
 							
-								}
+								}*/
 							}
 							if(sv) {
 								try {
