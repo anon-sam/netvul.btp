@@ -77,9 +77,14 @@ public class CVEParser {
 	}
 	
 	public void parse() {
-		
-		ExecutorService es = Executors.newFixedThreadPool(18);
-		for(int i=0;i<18;i++) {
+		int processors = Runtime.getRuntime().availableProcessors();
+
+		while(k!=A.size()) {
+		ExecutorService es = Executors.newFixedThreadPool(processors);
+		for(int i=0;i<processors;i++) {
+			if(k==A.size()) {
+				break;
+			}
 			es.execute(new Runnable() {
 				public void run() {
 					OWLNamedIndividual n=null;
@@ -127,7 +132,7 @@ public class CVEParser {
 									//System.out.println(parser.getValueAsString());
 									//return;
 								}
-								else if(sv&&fname.equals("problemtype")) {
+								else if(fname.equals("problemtype")) {
 									String jsin=null;
 									do {
 										jst = parser.nextToken();
@@ -137,6 +142,13 @@ public class CVEParser {
 									}while(jsin==null || !"value".equals(jsin));
 									jst= parser.nextToken();
 									if(!(parser.getValueAsString().startsWith("CWE-") || parser.getValueAsString().startsWith("NVD"))) {
+										String jsoin=null;
+										do {
+											jst=parser.nextToken();
+											if(JsonToken.FIELD_NAME.equals(jst)) {
+												jsoin=parser.getCurrentName();
+											}
+										}while(jsoin==null || !"description".equals(jsoin));
 										sv=false;
 										continue;
 									}
@@ -147,7 +159,7 @@ public class CVEParser {
 									//	man.addAxiom(o, cs);
 									//}
 								}
-								else if(sv&&fname.equals("references")) {
+								else if(fname.equals("references")) {
 									String jsin=null;
 									do {
 										jst = parser.nextToken();
@@ -211,6 +223,7 @@ public class CVEParser {
 			e.printStackTrace();
 			man.clearOntologies();
 			System.exit(1);
+		}
 		}
 		man.clearOntologies();
 	}
