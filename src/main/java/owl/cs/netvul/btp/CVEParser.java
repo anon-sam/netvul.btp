@@ -80,7 +80,7 @@ public class CVEParser {
 		int processors = Runtime.getRuntime().availableProcessors();
 
 		while(k!=A.size()) {
-		ExecutorService es = Executors.newFixedThreadPool(processors);
+		ExecutorService es = Executors.newCachedThreadPool();//Executors.newFixedThreadPool(processors);
 		for(int i=0;i<processors;i++) {
 			if(k==A.size()) {
 				break;
