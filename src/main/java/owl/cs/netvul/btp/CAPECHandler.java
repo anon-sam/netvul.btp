@@ -17,6 +17,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.model.OWLSameIndividualAxiom;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -29,7 +30,7 @@ class CAPECHandler extends DefaultHandler{
 	OWLNamedIndividual n;
 	OWLClass atk;
 	OWLClass cap;
-	OWLObjectProperty op;
+	//OWLObjectProperty op;
 	IRI ir;
 	
 	boolean isRelAtk = false;
@@ -54,7 +55,7 @@ class CAPECHandler extends DefaultHandler{
 		}
 		atk = df.getOWLClass(ir+"#Attack");
 		cap = df.getOWLClass(ir+"#CAPEC");
-		op = df.getOWLObjectProperty(ir+"#hasCAPEC");
+		//op = df.getOWLObjectProperty(ir+"#hasCAPEC");
 	}
 	
 	@Override
@@ -78,7 +79,8 @@ class CAPECHandler extends DefaultHandler{
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(cap, i);
 				man.addAxiom(o, at);
 			}
-			OWLObjectPropertyAssertionAxiom atca = df.getOWLObjectPropertyAssertionAxiom(op, n, i);
+			//OWLObjectPropertyAssertionAxiom atca = df.getOWLObjectPropertyAssertionAxiom(op, n, i);
+			OWLSameIndividualAxiom atca=df.getOWLSameIndividualAxiom(n,i);
 			man.addAxiom(o, atca);
 		}
 		else if(qName.equalsIgnoreCase("Related_Attack_patterns")) {

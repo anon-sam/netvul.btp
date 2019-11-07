@@ -16,6 +16,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.model.OWLSameIndividualAxiom;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -27,7 +28,7 @@ class CWEHandler extends DefaultHandler{
 	OWLDataFactory df;
 	OWLNamedIndividual n;
 	OWLClass cap;
-	OWLObjectProperty op;
+	//OWLObjectProperty op;
 	OWLClass atk;
 	IRI ir;
 	
@@ -53,7 +54,7 @@ class CWEHandler extends DefaultHandler{
 			System.exit(1);
 		}
 		cap = df.getOWLClass(ir+"#CWE");
-		op = df.getOWLObjectProperty(ir+"#hasCWE");
+		//op = df.getOWLObjectProperty(ir+"#hasCWE");
 		atk = df.getOWLClass(ir+"#Weakness");
 	}
 
@@ -80,7 +81,8 @@ class CWEHandler extends DefaultHandler{
 				OWLClassAssertionAxiom at = df.getOWLClassAssertionAxiom(cap, i);
 				man.addAxiom(o, at);
 			}
-			OWLObjectPropertyAssertionAxiom atca = df.getOWLObjectPropertyAssertionAxiom(op, n, i);
+			//OWLObjectPropertyAssertionAxiom atca = df.getOWLObjectPropertyAssertionAxiom(op, n, i);
+			OWLSameIndividualAxiom atca = df.getOWLSameIndividualAxiom(n,i);
 			man.addAxiom(o, atca);
 		}
 		else if(qName.equalsIgnoreCase("Related_Attack_patterns")) {
