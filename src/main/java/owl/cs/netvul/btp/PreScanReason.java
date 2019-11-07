@@ -29,6 +29,7 @@ class PreScanReason {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PreScanReason ps = new PreScanReason();
+		ps.process();
 	}
 	
 	public PreScanReason() {
@@ -38,6 +39,10 @@ class PreScanReason {
 		f = new File(nv.getFile());
 		fp=new File(nvp.getFile());
 		df=man.getOWLDataFactory();
+		
+	}
+	
+	public void process() {
 		try {
 			o = man.loadOntologyFromOntologyDocument(f);
 			op = man.loadOntologyFromOntologyDocument(fp);
@@ -58,6 +63,7 @@ class PreScanReason {
 			man.clearOntologies();
 			System.exit(1);
 		}
+		man.clearOntologies();
 	}
 
 }
