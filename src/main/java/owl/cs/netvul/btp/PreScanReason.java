@@ -13,6 +13,7 @@ import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.reasoner.InferenceType;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
+import org.semanticweb.owlapi.util.AutoIRIMapper;
 import org.semanticweb.owlapi.util.InferredOntologyGenerator;
 
 class PreScanReason {
@@ -24,6 +25,7 @@ class PreScanReason {
 	IRI ir;
 	ReasonerFactory rf;
 	OWLReasoner r;
+	AutoIRIMapper aim;
 	OWLDataFactory df;
 
 	public static void main(String[] args) {
@@ -34,6 +36,8 @@ class PreScanReason {
 	
 	public PreScanReason() {
 		man = OWLManager.createOWLOntologyManager();
+		aim = new AutoIRIMapper(new File("src/main/resources"),false);
+		man.getIRIMappers().add(aim);
 		nv=this.getClass().getClassLoader().getResource("nval.owl");
 		nvp=this.getClass().getClassLoader().getResource("nvalPreProc.owl");
 		f = new File(nv.getFile());
