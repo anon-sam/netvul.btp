@@ -2,6 +2,9 @@ package owl.cs.netvul.btp;
 
 import java.io.File;
 import java.net.URL;
+
+import org.semanticweb.HermiT.Configuration;
+import org.semanticweb.HermiT.Configuration.TableauMonitorType;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
@@ -10,6 +13,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.reasoner.ConsoleProgressMonitor;
 import org.semanticweb.owlapi.reasoner.InferenceType;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
@@ -51,12 +55,16 @@ class PreScanReason {
 			o = man.loadOntologyFromOntologyDocument(f);
 			op = man.loadOntologyFromOntologyDocument(fp);
 			ir=o.getOntologyID().getOntologyIRI().get();
+			Configuration config = new Configuration();
+			// config.tableauMonitorType= TableauMonitorType.DEBUGGER_HISTORY_ON;
+			config.reasonerProgressMonitor=new ConsoleProgressMonitor();
 			OWLReasonerFactory rf=new ReasonerFactory();
-			OWLReasoner ht = rf.createReasoner(op);
+			OWLReasoner ht = rf.createReasoner(op,config);
 			ht.precomputeInferences(InferenceType.CLASS_ASSERTIONS,InferenceType.OBJECT_PROPERTY_ASSERTIONS);
 			InferredOntologyGenerator iog = new InferredOntologyGenerator(ht);
 			iog.fillOntology(df, o);
 			man.saveOntology(o);
+			ht.dispose();
 		}catch(OWLOntologyCreationException e) {
 			e.printStackTrace();
 			man.clearOntologies();
