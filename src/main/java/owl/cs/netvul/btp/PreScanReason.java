@@ -60,7 +60,7 @@ class PreScanReason {
 			config.reasonerProgressMonitor=new ConsoleProgressMonitor();
 			OWLReasonerFactory rf=new ReasonerFactory();
 			OWLReasoner ht = rf.createReasoner(op,config);
-			ht.precomputeInferences(InferenceType.CLASS_ASSERTIONS,InferenceType.OBJECT_PROPERTY_ASSERTIONS);
+			ht.precomputeInferences(InferenceType.OBJECT_PROPERTY_ASSERTIONS);
 			InferredOntologyGenerator iog = new InferredOntologyGenerator(ht);
 			iog.fillOntology(df, o);
 			man.saveOntology(o);
