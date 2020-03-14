@@ -57,7 +57,7 @@ class PreScanReason {
 			ir=o.getOntologyID().getOntologyIRI().get();
 			Configuration config = new Configuration();
 			// config.tableauMonitorType= TableauMonitorType.DEBUGGER_HISTORY_ON;
-			config.reasonerProgressMonitor=new ConsoleProgressMonitor();
+			//config.reasonerProgressMonitor=new ConsoleProgressMonitor();
 			OWLReasonerFactory rf=new ReasonerFactory();
 			OWLReasoner ht = rf.createReasoner(op,config);
 			ht.precomputeInferences(InferenceType.OBJECT_PROPERTY_ASSERTIONS);
