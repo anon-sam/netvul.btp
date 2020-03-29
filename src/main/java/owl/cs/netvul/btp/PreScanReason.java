@@ -56,10 +56,10 @@ class PreScanReason {
 			op = man.loadOntologyFromOntologyDocument(fp);
 			ir=o.getOntologyID().getOntologyIRI().get();
 			Configuration config = new Configuration();
-			// config.tableauMonitorType= TableauMonitorType.DEBUGGER_HISTORY_ON;
+			//config.tableauMonitorType= TableauMonitorType.DEBUGGER_HISTORY_ON;
 			config.reasonerProgressMonitor=new ConsoleProgressMonitor();
 			OWLReasonerFactory rf=new ReasonerFactory();
-			OWLReasoner ht = rf.createReasoner(op,config);
+			OWLReasoner ht = rf.createNonBufferingReasoner(op,config);
 			ht.precomputeInferences(InferenceType.CLASS_ASSERTIONS,InferenceType.OBJECT_PROPERTY_ASSERTIONS);
 			InferredOntologyGenerator iog = new InferredOntologyGenerator(ht);
 			iog.fillOntology(df, o);
