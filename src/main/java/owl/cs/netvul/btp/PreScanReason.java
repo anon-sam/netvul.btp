@@ -56,9 +56,10 @@ class PreScanReason {
 	}
 	
 	public void preprocess() {
-		ExecutorService es = Executors.newCachedThreadPool();
+		ExecutorService es = Executors.newFixedThreadPool(2);
 		i=0;
 		while(i<2) {
+			//System.out.println(i);
 			es.execute(new Runnable() {
 				public void run() {
 					try {
@@ -66,6 +67,7 @@ class PreScanReason {
 						synchronized(i){
 							i++;
 							URL pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
+							System.out.println(pp1.toString());
 							f1 = new File(pp1.getFile());
 						}
 						o=man.loadOntologyFromOntologyDocument(f);
@@ -73,7 +75,7 @@ class PreScanReason {
 						ir=o.getOntologyID().getOntologyIRI().get();
 						Configuration config = new Configuration();
 						// config.tableauMonitorType= TableauMonitorType.DEBUGGER_HISTORY_ON;
-						config.reasonerProgressMonitor=new ConsoleProgressMonitor();
+						//config.reasonerProgressMonitor=new ConsoleProgressMonitor();
 						OWLReasonerFactory rf=new ReasonerFactory();
 						OWLReasoner ht = rf.createReasoner(op,config);
 						ht.precomputeInferences(InferenceType.CLASS_ASSERTIONS,InferenceType.OBJECT_PROPERTY_ASSERTIONS);
