@@ -2,6 +2,9 @@ package owl.cs.netvul.btp;
 
 import java.io.File;
 import java.net.URL;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import org.semanticweb.HermiT.Configuration;
 import org.semanticweb.HermiT.Configuration.TableauMonitorType;
@@ -31,10 +34,12 @@ class PreScanReason {
 	OWLReasoner r;
 	AutoIRIMapper aim;
 	OWLDataFactory df;
+	Integer i;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PreScanReason ps = new PreScanReason();
+		ps.preprocess();
 		ps.process();
 	}
 	
@@ -48,6 +53,61 @@ class PreScanReason {
 		fp=new File(nvp.getFile());
 		df=man.getOWLDataFactory();
 		
+	}
+	
+	public void preprocess() {
+		ExecutorService es = Executors.newCachedThreadPool();
+		i=0;
+		while(i<2) {
+			es.execute(new Runnable() {
+				public void run() {
+					try {
+						File f1;
+						synchronized(i){
+							i++;
+							URL pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
+							f1 = new File(pp1.getFile());
+						}
+						o=man.loadOntologyFromOntologyDocument(f);
+						op=man.loadOntologyFromOntologyDocument(f1);
+						ir=o.getOntologyID().getOntologyIRI().get();
+						Configuration config = new Configuration();
+						// config.tableauMonitorType= TableauMonitorType.DEBUGGER_HISTORY_ON;
+						config.reasonerProgressMonitor=new ConsoleProgressMonitor();
+						OWLReasonerFactory rf=new ReasonerFactory();
+						OWLReasoner ht = rf.createReasoner(op,config);
+						ht.precomputeInferences(InferenceType.CLASS_ASSERTIONS,InferenceType.OBJECT_PROPERTY_ASSERTIONS);
+						InferredOntologyGenerator iog = new InferredOntologyGenerator(ht);
+						synchronized(o) {
+							iog.fillOntology(df, o);
+						}
+						synchronized(man) {
+							man.saveOntology(o);
+							ht.dispose();
+						}
+					}catch(OWLOntologyCreationException e) {
+						e.printStackTrace();
+						man.clearOntologies();
+						System.exit(1);
+					} catch (OWLOntologyStorageException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+						man.clearOntologies();
+						System.exit(1);
+					}
+				}
+			});
+		}
+		es.shutdown();
+		try {
+			es.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			man.clearOntologies();
+			System.exit(1);
+		}
+		man.clearOntologies();
 	}
 	
 	public void process() {
