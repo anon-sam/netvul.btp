@@ -16,6 +16,8 @@ import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLObjectPropertyAssertionAxiom;
@@ -38,6 +40,7 @@ public class CVEParser {
 	OWLClass vul;
 	//OWLClass cw;
 	OWLObjectProperty caus;
+	OWLDataProperty descp;
 	//ClassLoader cl;
 	List<Integer> A;
 	int k;
@@ -73,6 +76,7 @@ public class CVEParser {
 		}
 		vul = df.getOWLClass(ir+"#Vulnerability");
 		caus = df.getOWLObjectProperty(ir+"#causedBy");
+		descp = df.getOWLDataProperty(ir+"#Description");
 		//cw = df.getOWLClass(ir+"#CWE");
 	}
 	
@@ -96,6 +100,7 @@ public class CVEParser {
 					//ClassLoader cl = ClassLoader.getSystemClassLoader();
 					String wkname="";
 					String annotname="";
+					String desc="";
 					String cwfn;
 					synchronized(A) {
 						cwfn = this.getClass().getClassLoader().getResource("nvd/nvdcve-1.1-"+A.get(k).toString()+".json").getFile();
@@ -179,56 +184,22 @@ public class CVEParser {
 							
 									}while(jsin==null || !"description".equals(jsin));
 									
-								}
-								/*else if(fname.equals("problemtype")) {
-									sv=true;
-									String jsin=null;
+									
 									do {
 										jst = parser.nextToken();
 										if(JsonToken.FIELD_NAME.equals(jst)) {
 											jsin = parser.getCurrentName();
 										}
-									}while(jsin==null || !"value".equals(jsin));
-									jst= parser.nextToken();
-									if(!(parser.getValueAsString().startsWith("CWE-") || parser.getValueAsString().startsWith("NVD"))) {
-										String jsoin=null;
-										do {
-											jst=parser.nextToken();
-											if(JsonToken.FIELD_NAME.equals(jst)) {
-												jsoin=parser.getCurrentName();
-											}
-										}while(jsoin==null || !"description".equals(jsoin));
-										sv=false;
-										continue;
-									}
-									wkname=parser.getValueAsString();
-									//wk = df.getOWLNamedIndividual(ir+"#"+parser.getValueAsString());
-									//cs = df.getOWLObjectPropertyAssertionAxiom(caus, n, wk);
-									//synchronized(man) {
-									//	man.addAxiom(o, cs);
-									//}
-								}
-								else if(fname.equals("references")) {
-									sv=true;
-									String jsin=null;
-									do {
-										jst = parser.nextToken();
-										if(JsonToken.FIELD_NAME.equals(jst)) {
-											jsin = parser.getCurrentName();
-										}
-										if(jsin!=null && "url".equals(jsin)) {
+										if(jsin!=null && "value".equals(jsin)) {
 											jst= parser.nextToken();
-											annotname=parser.getValueAsString();
-											//ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(parser.getValueAsString()));
-											//uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
-										//	synchronized(man) {
-											//	man.addAxiom(o, uratk);
-											//}
+											desc=parser.getValueAsString();
+										
 										}
 							
-									}while(jsin==null || !"description".equals(jsin));
-							
-								}*/
+									}while(jsin==null || !"configurations".equals(jsin));
+									
+								}
+								
 							}
 							if(sv) {
 								try {
@@ -237,10 +208,14 @@ public class CVEParser {
 									OWLObjectPropertyAssertionAxiom cs = df.getOWLObjectPropertyAssertionAxiom(caus, n, wk);
 									OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(annotname));
 									OWLAnnotationAssertionAxiom uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
+									OWLDataPropertyAssertionAxiom descax = df.getOWLDataPropertyAssertionAxiom(descp, n, desc);
 									synchronized(man) {
 										man.addAxiom(o, vcv);
-										man.addAxiom(o, cs);
+										if(wkname.startsWith("CWE-")) {
+											man.addAxiom(o, cs);
+										}
 										man.addAxiom(o, uratk);
+										man.addAxiom(o, descax);
 										man.saveOntology(o);
 									}
 								} catch (OWLOntologyStorageException e) {

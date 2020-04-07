@@ -65,8 +65,8 @@ class PreScanReason {
 					try {
 						File f1;
 						synchronized(i){
-							i++;
-							URL pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
+							int k=++i;
+							URL pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+k+".owl");
 							System.out.println(pp1.toString());
 							f1 = new File(pp1.getFile());
 						}
