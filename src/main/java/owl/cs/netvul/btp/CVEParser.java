@@ -82,7 +82,7 @@ public class CVEParser {
 	
 	public void parse() {
 		int processors = Runtime.getRuntime().availableProcessors();
-
+		//System.out.println(processors);
 		while(k!=A.size()) {
 		ExecutorService es =Executors.newFixedThreadPool(processors);
 		for(int i=0;i<processors;i++) {
@@ -193,6 +193,7 @@ public class CVEParser {
 										if(jsin!=null && "value".equals(jsin)) {
 											jst= parser.nextToken();
 											desc=parser.getValueAsString();
+											break;
 										
 										}
 							
