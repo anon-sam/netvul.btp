@@ -42,7 +42,7 @@ public class CVEParser {
 	OWLObjectProperty caus;
 	OWLDataProperty descp;
 	//ClassLoader cl;
-	List<Integer> A;
+	volatile List<Integer> A;
 	int k;
 	IRI ir;
 

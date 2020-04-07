@@ -34,7 +34,7 @@ class PreScanReason {
 	OWLReasoner r;
 	AutoIRIMapper aim;
 	OWLDataFactory df;
-	Integer i;
+	volatile Integer i;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
