@@ -193,7 +193,7 @@ public class CVEParser {
 										if(jsin!=null && "value".equals(jsin)) {
 											jst= parser.nextToken();
 											desc=parser.getValueAsString();
-											break;
+											
 										
 										}
 							
