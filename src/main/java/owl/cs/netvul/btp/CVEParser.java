@@ -50,6 +50,7 @@ public class CVEParser {
 		// TODO Auto-generated method stub
 		CVEParser cv=new CVEParser();
 		cv.parse();
+		System.exit(0);
 	}
 	
 	public CVEParser() {
@@ -241,6 +242,9 @@ public class CVEParser {
 						e.printStackTrace();
 						man.clearOntologies();
 						System.exit(1);
+					}
+					finally {
+						System.exit(0);
 					}
 				}
 			});

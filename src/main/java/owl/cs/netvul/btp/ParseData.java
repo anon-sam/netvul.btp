@@ -14,6 +14,7 @@ class ParseData {
 		ParseData pd=new ParseData();
 		pd.parseCAPEC();
 		pd.parseCWE();
+		System.exit(0);
 		//pd.parseCVE();
 	}
 	
