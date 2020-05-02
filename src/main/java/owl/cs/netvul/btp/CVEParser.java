@@ -203,6 +203,9 @@ public class CVEParser {
 									
 									do {
 										jst = parser.nextToken();
+										if(JsonToken.FIELD_NAME.equals(jst)) {
+											jsin = parser.getCurrentName();
+										}
 									}while(jsin==null || !"configurations".equals(jsin));
 									
 								}
@@ -244,9 +247,9 @@ public class CVEParser {
 						man.clearOntologies();
 						System.exit(1);
 					}
-					finally {
-						System.exit(0);
-					}
+					//finally {
+					//	System.exit(0);
+					//}
 				}
 			});
 		}
