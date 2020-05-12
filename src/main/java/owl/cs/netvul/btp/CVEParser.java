@@ -85,11 +85,10 @@ public class CVEParser {
 		int processors = Runtime.getRuntime().availableProcessors();
 		//System.out.println(processors);
 		while(k!=A.size()) {
-		ExecutorService es =Executors.newFixedThreadPool(processors);
+			
+		ExecutorService es =Executors.newCachedThreadPool();
 		for(int i=0;i<=processors;i++) {
-			if(k==A.size()) {
-				break;
-			}
+			
 			es.execute(new Runnable() {
 				public void run() {
 					OWLNamedIndividual n=null;
