@@ -86,7 +86,7 @@ public class CVEParser {
 		//System.out.println(processors);
 		while(k!=A.size()) {
 		ExecutorService es =Executors.newFixedThreadPool(processors);
-		for(int i=0;i<processors;i++) {
+		for(int i=0;i<=processors;i++) {
 			if(k==A.size()) {
 				break;
 			}
@@ -258,9 +258,10 @@ public class CVEParser {
 			es.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			man.clearOntologies();
-			System.exit(1);
+			//e.printStackTrace();
+			//man.clearOntologies();
+			//System.exit(1);
+			Thread.currentThread().interrupt();
 		}
 		}
 		man.clearOntologies();
