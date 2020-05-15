@@ -314,11 +314,47 @@
     
 
 
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Basscore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Basscore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Description -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Description">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Exscore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Exscore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Impscore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Impscore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#isRemote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#isRemote">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jhicky16/ontologies/2019/4/nval#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 

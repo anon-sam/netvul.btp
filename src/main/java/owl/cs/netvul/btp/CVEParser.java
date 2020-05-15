@@ -41,6 +41,10 @@ public class CVEParser {
 	//OWLClass cw;
 	OWLObjectProperty caus;
 	OWLDataProperty descp;
+	OWLDataProperty isremote;
+	OWLDataProperty scoreb;
+	OWLDataProperty scoree;
+	OWLDataProperty scorei;
 	//ClassLoader cl;
 	volatile List<Integer> A;
 	volatile int k;
@@ -78,6 +82,10 @@ public class CVEParser {
 		vul = df.getOWLClass(ir+"#Vulnerability");
 		caus = df.getOWLObjectProperty(ir+"#causedBy");
 		descp = df.getOWLDataProperty(ir+"#Description");
+		isremote = df.getOWLDataProperty(ir+"#isRemote");
+		scoreb = df.getOWLDataProperty(ir+"#Basscore");
+		scoree  =df.getOWLDataProperty(ir+"#Exscore");
+		scorei = df.getOWLDataProperty(ir+"#Impscore");
 		//cw = df.getOWLClass(ir+"#CWE");
 	}
 	
@@ -102,6 +110,10 @@ public class CVEParser {
 					String annotname="";
 					String desc="";
 					String cwfn;
+					int isRem=0;
+					float bscore=0;
+					float escore=0;
+					float iscore=0;
 					synchronized(A) {
 						cwfn = this.getClass().getClassLoader().getResource("nvd/nvdcve-1.1-"+A.get(k).toString()+".json").getFile();
 						k++;
@@ -198,14 +210,35 @@ public class CVEParser {
 										
 										}
 							
-									}while(jsin==null || !"configurations".equals(jsin));
+									}while(jsin==null || !"impact".equals(jsin));
 									
 									do {
 										jst = parser.nextToken();
 										if(JsonToken.FIELD_NAME.equals(jst)) {
 											jsin = parser.getCurrentName();
+											if(jsin!=null && "accessVector".equals(jsin)) {
+												jst = parser.nextToken();
+												if("NETWORK".equalsIgnoreCase(parser.getValueAsString())){
+													isRem = 1;
+												}
+												else {
+													isRem = 0;
+												}
+											}
+											if(jsin!=null && "baseScore".equalsIgnoreCase(jsin)) {
+												jst = parser.nextToken();
+												bscore = parser.getFloatValue();
+											}
+											if(jsin!=null && "exploitabilityScore".equalsIgnoreCase(jsin)) {
+												jst = parser.nextToken();
+												escore = parser.getFloatValue();
+											}
+											if(jsin!=null && "impactScore".equalsIgnoreCase(jsin)) {
+												jst = parser.nextToken();
+												iscore = parser.getFloatValue();
+											}
 										}
-									}while(jsin==null || !"configurations".equals(jsin));
+									}while(jsin==null || !"publishedDate".equals(jsin));
 									
 								}
 								
@@ -218,6 +251,10 @@ public class CVEParser {
 									OWLAnnotation ur = df.getOWLAnnotation(df.getRDFSSeeAlso(), df.getOWLLiteral(annotname));
 									OWLAnnotationAssertionAxiom uratk = df.getOWLAnnotationAssertionAxiom(n.getIRI(), ur);
 									OWLDataPropertyAssertionAxiom descax = df.getOWLDataPropertyAssertionAxiom(descp, n, desc);
+									OWLDataPropertyAssertionAxiom isremax = df.getOWLDataPropertyAssertionAxiom(isremote, n,isRem);
+									OWLDataPropertyAssertionAxiom bscoreax = df.getOWLDataPropertyAssertionAxiom(scoreb, n, bscore);
+									OWLDataPropertyAssertionAxiom escoreax = df.getOWLDataPropertyAssertionAxiom(scoree, n, escore);
+									OWLDataPropertyAssertionAxiom iscoreax = df.getOWLDataPropertyAssertionAxiom(scorei, n, iscore);
 									synchronized(man) {
 										man.addAxiom(o, vcv);
 										if(wkname.startsWith("CWE-")) {
@@ -225,6 +262,10 @@ public class CVEParser {
 										}
 										man.addAxiom(o, uratk);
 										man.addAxiom(o, descax);
+										man.addAxiom(o, isremax);
+										man.addAxiom(o, bscoreax);
+										man.addAxiom(o, escoreax);
+										man.addAxiom(o, iscoreax);
 										man.saveOntology(o);
 									}
 								} catch (OWLOntologyStorageException e) {
