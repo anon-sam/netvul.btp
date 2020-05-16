@@ -218,7 +218,10 @@ public class CVEParser {
 											jsin = parser.getCurrentName();
 											if(jsin!=null && "accessVector".equals(jsin)) {
 												jst = parser.nextToken();
-												if("NETWORK".equalsIgnoreCase(parser.getValueAsString())){
+												if(parser.getValueAsString().contains("ADJACENT")) {
+													isRem=2;
+												}
+												else if("NETWORK".equalsIgnoreCase(parser.getValueAsString())){
 													isRem = 1;
 												}
 												else {
