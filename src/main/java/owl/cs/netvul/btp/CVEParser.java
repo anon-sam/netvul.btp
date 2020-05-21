@@ -93,10 +93,10 @@ public class CVEParser {
 	public void parse() {
 		int processors = Runtime.getRuntime().availableProcessors();
 		//System.out.println(processors);
-		while(k!=A.size()) {
+		//while(k!=A.size()) {
 			
 		ExecutorService es =Executors.newCachedThreadPool();
-		for(int i=0;i<1;i++) {
+		//for(int i=0;i<1;i++) {
 			
 			es.execute(new Runnable() {
 				public void run() {
@@ -296,7 +296,7 @@ public class CVEParser {
 					//}
 				}
 			});
-		}
+		//}
 		es.shutdown();
 		try {
 			es.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
@@ -307,7 +307,7 @@ public class CVEParser {
 			//System.exit(1);
 			Thread.currentThread().interrupt();
 		}
-		}
+		//}
 		man.clearOntologies();
 	}
 }
