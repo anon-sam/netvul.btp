@@ -205,8 +205,9 @@ public class CVEParser {
 										}
 										if(jsin!=null && "value".equals(jsin)) {
 											jst= parser.nextToken();
-											char []a=parser.getTextCharacters();
-											desc = new String(a);
+											desc = parser.getValueAsString();
+											//char []a=parser.getTextCharacters();
+											//desc = new String(a);
 											break;
 										
 										}
