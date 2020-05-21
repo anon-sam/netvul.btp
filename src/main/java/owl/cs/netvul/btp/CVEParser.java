@@ -205,9 +205,32 @@ public class CVEParser {
 										}
 										if(jsin!=null && "value".equals(jsin)) {
 											jst= parser.nextToken();
-											desc = parser.getValueAsString();
-											//char []a=parser.getTextCharacters();
-											//desc = new String(a);
+											String myString  = parser.getValueAsString();
+											StringBuilder newString = new StringBuilder(myString.length());
+											for (int offset = 0; offset < myString.length();)
+											{
+											    int codePoint = myString.codePointAt(offset);
+											    offset += Character.charCount(codePoint);
+
+											    // Replace invisible control characters and unused code points
+											    switch (Character.getType(codePoint))
+											    {
+											        case Character.CONTROL:     // \p{Cc}
+											        case Character.FORMAT:      // \p{Cf}
+											        case Character.PRIVATE_USE: // \p{Co}
+											        case Character.SURROGATE:   // \p{Cs}
+											        case Character.UNASSIGNED:  // \p{Cn}
+											            newString.append('?');
+											            break;
+											        default:
+											            newString.append(Character.toChars(codePoint));
+											            break;
+											    }
+											}
+											
+											//desc = parser.getValueAsString();
+											//char []a=parser.getText();
+											desc = new String(newString);
 											break;
 										
 										}
