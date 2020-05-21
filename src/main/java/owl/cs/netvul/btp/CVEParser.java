@@ -96,7 +96,7 @@ public class CVEParser {
 		while(k!=A.size()) {
 			
 		ExecutorService es =Executors.newCachedThreadPool();
-		for(int i=0;i<=processors;i++) {
+		for(int i=0;i<1;i++) {
 			
 			es.execute(new Runnable() {
 				public void run() {
@@ -116,8 +116,8 @@ public class CVEParser {
 					float escore=0;
 					float iscore=0;
 					synchronized(A) {
-						cwfn = this.getClass().getClassLoader().getResource("nvd/nvdcve-1.1-"+A.get(k).toString()+".json").getFile();
-						k++;
+						cwfn = this.getClass().getClassLoader().getResource("nvd/nvdcve-1.1-2019.json").getFile();//"+A.get(k).toString()+".json").getFile();
+						//k++;
 					}
 					JsonFactory factory = new JsonFactory();
 					JsonParser parser;
