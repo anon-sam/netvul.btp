@@ -188,13 +188,14 @@ public class CVEParser {
 										jst = parser.nextToken();
 										if(JsonToken.FIELD_NAME.equals(jst)) {
 											jsin = parser.getCurrentName();
+											if(jsin!=null && "url".equals(jsin)) {
+												jst= parser.nextToken();
+												annotname=parser.getValueAsString();
+											
+											}
+								
 										}
-										if(jsin!=null && "url".equals(jsin)) {
-											jst= parser.nextToken();
-											annotname=parser.getValueAsString();
 										
-										}
-							
 									}while(jsin==null || !"description".equals(jsin));
 									
 									
@@ -202,34 +203,35 @@ public class CVEParser {
 										jst = parser.nextToken();
 										if(JsonToken.FIELD_NAME.equals(jst)) {
 											jsin = parser.getCurrentName();
-										}
-										if(jsin!=null && "value".equals(jsin)) {
-											jst= parser.nextToken();
-											String myString  = parser.getValueAsString();
-											StringBuilder newString = new StringBuilder(myString.length());
-											for (int offset = 0; offset < myString.length();)
-											{
-											    int codePoint = myString.codePointAt(offset);
-											    offset += Character.charCount(codePoint);
+											if(jsin!=null && "value".equals(jsin)) {
+												jst= parser.nextToken();
+												/*String myString  = parser.getValueAsString();
+												StringBuilder newString = new StringBuilder(myString.length());
+												for (int offset = 0; offset < myString.length();)
+												{
+												    int codePoint = myString.codePointAt(offset);
+												    offset += Character.charCount(codePoint);
 
-											    // Replace invisible control characters and unused code points
-											    switch (codePoint)
-											    {
-											    	case '\0':
-											   
-											    
-											        default:
-											            newString.append(Character.toChars(codePoint));
-											            break;
-											    }
-											}
+												    // Replace invisible control characters and unused code points
+												    switch (codePoint)
+												    {
+												    	case '\0':
+												   
+												    
+												        default:
+												            newString.append(Character.toChars(codePoint));
+												            break;
+												    }
+												}*/
+												
+												desc = parser.getValueAsString();
+												//char []a=parser.getText();
+												//desc = new String(newString);
+												break;
 											
-											//desc = parser.getValueAsString();
-											//char []a=parser.getText();
-											desc = new String(newString);
-											break;
-										
+											}
 										}
+										
 							
 									}while(jsin==null || !"impact".equals(jsin));
 									
