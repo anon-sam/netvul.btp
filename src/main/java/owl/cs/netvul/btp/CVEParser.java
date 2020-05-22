@@ -224,10 +224,12 @@ public class CVEParser {
 												            break;
 												    }
 												}*/
-												
-												desc = new String(parser.getText());
+												int ln = parser.getTextLength();
+												String str = parser.getText();
+												desc = new String(str.substring(0, ln));
 												//char []a=parser.getText();
 												//desc = new String(newString);
+												
 												break;
 											//l
 											}
