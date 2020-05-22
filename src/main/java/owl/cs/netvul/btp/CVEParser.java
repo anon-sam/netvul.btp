@@ -213,13 +213,10 @@ public class CVEParser {
 											    offset += Character.charCount(codePoint);
 
 											    // Replace invisible control characters and unused code points
-											    switch (Character.getType(codePoint))
+											    switch (codePoint)
 											    {
 											    	case '\0':
-											        case Character.CONTROL:     // \p{Cc}
-											        case Character.FORMAT:      // \p{Cf}
-											        case Character.PRIVATE_USE: // \p{Co}
-											        case Character.SURROGATE:   // \p{Cs}
+											   
 											    
 											        default:
 											            newString.append(Character.toChars(codePoint));
