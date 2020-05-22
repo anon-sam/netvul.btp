@@ -224,7 +224,7 @@ public class CVEParser {
 												    }
 												}*/
 												
-												desc = parser.getValueAsString();
+												desc = new String(parser.getValueAsString());
 												//char []a=parser.getText();
 												//desc = new String(newString);
 												break;
