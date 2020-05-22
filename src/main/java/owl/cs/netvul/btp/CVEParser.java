@@ -200,6 +200,7 @@ public class CVEParser {
 									
 									
 									do {
+										desc =null;
 										jst = parser.nextToken();
 										if(JsonToken.FIELD_NAME.equals(jst)) {
 											jsin = parser.getCurrentName();
