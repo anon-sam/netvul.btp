@@ -207,8 +207,8 @@ public class CVEParser {
 											jsin = parser.getCurrentName();
 											if(jsin!=null && "value".equals(jsin)) {
 												jst= parser.nextToken();
-												/*
-												String myString  = parser.getText();
+												char[] tr = parser.getTextCharacters();
+												String myString  = new String(tr);
 												StringBuilder newString = new StringBuilder(parser.getTextLength());
 												for (int offset = 0; offset < parser.getTextLength();)
 												{
@@ -227,7 +227,8 @@ public class CVEParser {
 												    }
 												}*/
 												int ln = parser.getTextLength();
-												String str = parser.getText();
+												
+												String str  = new String(newString);
 												desc = new String(str.substring(0, ln));
 												//char []a=parser.getText();
 												//desc = new String(newString);
