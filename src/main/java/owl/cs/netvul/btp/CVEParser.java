@@ -200,15 +200,15 @@ public class CVEParser {
 									
 									
 									do {
-										desc =null;
+										//desc =null;
 										jst = parser.nextToken();
 										if(JsonToken.FIELD_NAME.equals(jst)) {
 											jsin = parser.getCurrentName();
 											if(jsin!=null && "value".equals(jsin)) {
 												jst= parser.nextToken();
-												/*String myString  = parser.getValueAsString();
+												String myString  = parser.getValueAsString();
 												StringBuilder newString = new StringBuilder(myString.length());
-												for (int offset = 0; offset < myString.length();)
+												for (int offset = 0; offset < parser.getTextLength(); )
 												{
 												    int codePoint = myString.codePointAt(offset);
 												    offset += Character.charCount(codePoint);
@@ -223,12 +223,12 @@ public class CVEParser {
 												            newString.append(Character.toChars(codePoint));
 												            break;
 												    }
-												}*/
-												int ln = parser.getTextLength();
-												String str = parser.getText();
-												desc = new String(str.substring(0, ln));
+												}
+												//int ln = parser.getTextLength();
+												//String str = parser.getText();
+												//desc = new String(str.substring(0, ln));
 												//char []a=parser.getText();
-												//desc = new String(newString);
+												desc = new String(newString);
 												
 												break;
 											//l
