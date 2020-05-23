@@ -225,7 +225,7 @@ public class CVEParser {
 												            newString.append(Character.toChars(codePoint));
 												            break;
 												    }
-												}*/
+												}
 												int ln = parser.getTextLength();
 												
 												String str  = new String(newString);
