@@ -206,7 +206,7 @@ public class CVEParser {
 											jsin = parser.getCurrentName();
 											if(jsin!=null && "value".equals(jsin)) {
 												jst= parser.nextToken();
-												String myString  = parser.getValueAsString();
+												String myString  = parser.getText();
 												StringBuilder newString = new StringBuilder(parser.getTextLength());
 												for (int offset = 0; offset < parser.getTextLength();)
 												{
