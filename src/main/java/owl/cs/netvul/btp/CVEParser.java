@@ -207,8 +207,8 @@ public class CVEParser {
 											if(jsin!=null && "value".equals(jsin)) {
 												jst= parser.nextToken();
 												String myString  = parser.getValueAsString();
-												StringBuilder newString = new StringBuilder(myString.length());
-												for (int offset = 0; offset < parser.getTextLength(); )
+												StringBuilder newString = new StringBuilder(parser.getTextLength());
+												for (int offset = 0; offset < parser.getTextLength();)
 												{
 												    int codePoint = myString.codePointAt(offset);
 												    offset += Character.charCount(codePoint);
