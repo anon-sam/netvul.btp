@@ -124,6 +124,7 @@ public class CVEParser {
 					try {
 						File f= new File(cwfn);
 						parser  = factory.createParser(f);
+						parser.enable(JsonParser.Feature.IGNORE_UNDEFINED);
 						//ExecutorService asynwrit = Executors.newCachedThreadPool();
 						
 						while(!parser.isClosed()) {
@@ -230,6 +231,7 @@ public class CVEParser {
 												desc = new String(str.substring(0, ln));
 												//char []a=parser.getText();
 												//desc = new String(newString);
+												
 												break;
 											//l
 											}
