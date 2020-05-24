@@ -57,8 +57,8 @@ class PreScanReason {
 	
 	public void preprocess() {
 		ExecutorService es = Executors.newCachedThreadPool();
-		i=0;
-		while(i<2) {
+		i=1;
+		while(i<=2) {
 			//System.out.println(i);
 			es.execute(new Runnable() {
 				public void run() {
@@ -66,7 +66,8 @@ class PreScanReason {
 						File f1;
 						URL pp1;
 						synchronized(i){
-							Integer k=++i;
+							Integer k=i;
+							i=i+1;
 							pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+k.toString()+".owl");
 							//System.out.println(pp1.toString());
 							
