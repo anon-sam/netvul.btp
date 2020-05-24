@@ -105,9 +105,10 @@ class PreScanReason {
 			es.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			man.clearOntologies();
-			System.exit(1);
+			//e.printStackTrace();
+			//man.clearOntologies();
+			//System.exit(1);
+			Thread.currentThread().interrupt();
 		}
 		man.clearOntologies();
 	}
