@@ -67,7 +67,7 @@ class PreScanReason {
 						synchronized(i){
 							int k=++i;
 							URL pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+k+".owl");
-							System.out.println(pp1.toString());
+							//System.out.println(pp1.toString());
 							f1 = new File(pp1.getFile());
 						}
 						o=man.loadOntologyFromOntologyDocument(f);
