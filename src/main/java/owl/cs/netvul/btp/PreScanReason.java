@@ -56,7 +56,7 @@ class PreScanReason {
 	}
 	
 	public void preprocess() {
-		ExecutorService es = Executors.newFixedThreadPool(2);
+		ExecutorService es = Executors.newCachedThreadPool();
 		i=0;
 		while(i<2) {
 			//System.out.println(i);
