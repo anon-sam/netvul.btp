@@ -71,6 +71,7 @@ class PreScanReason {
 							//System.out.println(pp1.toString());
 							
 						}
+						System.out.println(pp1.toString());
 						f1 = new File(pp1.getFile());
 						o=man.loadOntologyFromOntologyDocument(f);
 						op=man.loadOntologyFromOntologyDocument(f1);
