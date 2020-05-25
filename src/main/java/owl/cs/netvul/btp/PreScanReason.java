@@ -52,12 +52,13 @@ class PreScanReason {
 		f = new File(nv.getFile());
 		fp=new File(nvp.getFile());
 		df=man.getOWLDataFactory();
+		i=1;
 		
 	}
 	
 	public void preprocess() {
-		ExecutorService es = Executors.newFixedThreadPool(2);
-		i=1;
+		ExecutorService es = Executors.newCachedThreadPool();
+		
 		while(i<=2) {
 			//System.out.println(i);
 			es.execute(new Runnable() {
