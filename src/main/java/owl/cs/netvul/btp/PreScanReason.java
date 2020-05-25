@@ -77,7 +77,7 @@ class PreScanReason {
 							//Integer k=i;
 							
 							pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
-							i++;
+							
 							//System.out.println(pp1.toString());
 							//System.out.println(pp1.toString());
 							f1 = new File(pp1.getFile());
@@ -112,6 +112,9 @@ class PreScanReason {
 					}
 				}
 			});
+			synchronized(pp1) {
+				i++;
+			}
 		}
 		es.shutdown();
 		try {
