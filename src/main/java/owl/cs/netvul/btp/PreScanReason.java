@@ -35,7 +35,7 @@ class PreScanReason {
 	AutoIRIMapper aim;
 	OWLDataFactory df;
 	volatile URL pp1;
-	volatile int i;
+	 int i;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -61,7 +61,7 @@ class PreScanReason {
 		ExecutorService es = Executors.newCachedThreadPool();
 		
 		while(i<=2) {
-			System.out.println(i);
+			///System.out.println(i);
 			if(i>2)
 				break;
 			//synchronized(i) {
