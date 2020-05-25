@@ -77,7 +77,7 @@ class PreScanReason {
 							pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
 							
 							//System.out.println(pp1.toString());
-							System.out.println(pp1.toString());
+							//System.out.println(pp1.toString());
 							f1 = new File(pp1.getFile());
 						}
 
