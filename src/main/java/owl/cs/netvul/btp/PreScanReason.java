@@ -34,8 +34,8 @@ class PreScanReason {
 	OWLReasoner r;
 	AutoIRIMapper aim;
 	OWLDataFactory df;
-	volatile URL pp1;
-	 int i;
+	
+	 volatile Integer i;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -73,9 +73,9 @@ class PreScanReason {
 					try {
 						File f1;
 					
-						synchronized(pp1){
+						synchronized(i){
 							//Integer k=i;
-							
+							URL pp1;
 							pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
 							
 							//System.out.println(pp1.toString());
@@ -112,7 +112,7 @@ class PreScanReason {
 					}
 				}
 			});
-			synchronized(pp1) {
+			synchronized(i) {
 				i++;
 			}
 		}
