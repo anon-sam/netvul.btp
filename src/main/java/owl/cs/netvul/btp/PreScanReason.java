@@ -52,14 +52,15 @@ class PreScanReason {
 		f = new File(nv.getFile());
 		fp=new File(nvp.getFile());
 		df=man.getOWLDataFactory();
-		i=1;
+		i=0;
 		
 	}
 	
 	public void preprocess() {
 		ExecutorService es = Executors.newCachedThreadPool();
 		
-		while(i<=2) {
+		while(i<2) {
+			i++;
 			//System.out.println(i);
 			es.execute(new Runnable() {
 				public void run() {
@@ -70,7 +71,7 @@ class PreScanReason {
 							//Integer k=i;
 							//i=i+1;
 							pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
-							i++;
+							
 							//System.out.println(pp1.toString());
 							
 						}
