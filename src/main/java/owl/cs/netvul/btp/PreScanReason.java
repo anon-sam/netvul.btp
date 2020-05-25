@@ -34,6 +34,7 @@ class PreScanReason {
 	OWLReasoner r;
 	AutoIRIMapper aim;
 	OWLDataFactory df;
+	volatile URL pp1;
 	volatile Integer i;
 
 	public static void main(String[] args) {
@@ -60,23 +61,26 @@ class PreScanReason {
 		ExecutorService es = Executors.newCachedThreadPool();
 		
 		while(i<2) {
-			i++;
+			
+			//synchronized(i) {
+			//	i++;
+				
 			//System.out.println(i);
 			es.execute(new Runnable() {
 				public void run() {
 					try {
 						File f1;
-						URL pp1;
-						synchronized(i){
+					
+						synchronized(pp1){
 							//Integer k=i;
-							//i=i+1;
+							i=i+1;
 							pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
 							
 							//System.out.println(pp1.toString());
-							
+							System.out.println(pp1.toString());
+							f1 = new File(pp1.getFile());
 						}
-						System.out.println(pp1.toString());
-						f1 = new File(pp1.getFile());
+
 						o=man.loadOntologyFromOntologyDocument(f);
 						op=man.loadOntologyFromOntologyDocument(f1);
 						ir=o.getOntologyID().getOntologyIRI().get();
