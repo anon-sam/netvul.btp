@@ -61,7 +61,8 @@ class PreScanReason {
 		ExecutorService es = Executors.newCachedThreadPool();
 		
 		while(i<2) {
-			
+			if(i==2)
+				break;
 			//synchronized(i) {
 			//	i++;
 				
