@@ -58,7 +58,7 @@ class PreScanReason {
 	}
 	
 	public void preprocess() {
-		ExecutorService es = Executors.newCachedThreadPool();
+		//ExecutorService es = Executors.newCachedThreadPool();
 		
 		while(i<=2) {
 			///System.out.println(i);
@@ -68,12 +68,12 @@ class PreScanReason {
 			//	i++;
 				
 			System.out.println(i);
-			es.execute(new Runnable() {
-				public void run() {
+			//es.execute(new Runnable() {
+				//public void run() {
 					try {
 						File f1;
 					
-						synchronized(i){
+						//synchronized(i){
 							//Integer k=i;
 							URL pp1;
 							pp1 = this.getClass().getClassLoader().getResource("nvalPreProc"+i+".owl");
@@ -81,25 +81,25 @@ class PreScanReason {
 							//System.out.println(pp1.toString());
 							System.out.println(pp1.toString());
 							f1 = new File(pp1.getFile());
-						}
+						//}
 
 						o=man.loadOntologyFromOntologyDocument(f);
 						op=man.loadOntologyFromOntologyDocument(f1);
 						ir=o.getOntologyID().getOntologyIRI().get();
 						Configuration config = new Configuration();
 						// config.tableauMonitorType= TableauMonitorType.DEBUGGER_HISTORY_ON;
-						//config.reasonerProgressMonitor=new ConsoleProgressMonitor();
+						config.reasonerProgressMonitor=new ConsoleProgressMonitor();
 						OWLReasonerFactory rf=new ReasonerFactory();
 						OWLReasoner ht = rf.createReasoner(op,config);
 						ht.precomputeInferences(InferenceType.CLASS_ASSERTIONS,InferenceType.OBJECT_PROPERTY_ASSERTIONS);
 						InferredOntologyGenerator iog = new InferredOntologyGenerator(ht);
-						synchronized(o) {
+						//synchronized(o) {
 							iog.fillOntology(df, o);
-						}
-						synchronized(man) {
+						//}
+						//synchronized(man) {
 							man.saveOntology(o);
 							ht.dispose();
-						}
+						//}
 					}catch(OWLOntologyCreationException e) {
 						e.printStackTrace();
 						man.clearOntologies();
@@ -110,22 +110,22 @@ class PreScanReason {
 						man.clearOntologies();
 						System.exit(1);
 					}
-				}
-			});
-			synchronized(i) {
+				//}
+			//}//);
+			//synchronized(i) {
 				i++;
-			}
+			//}
 		}
-		es.shutdown();
-		try {
-			es.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
-		} catch (InterruptedException e) {
+		//es.shutdown();
+		//try {
+			//es.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
+		//} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
 			//man.clearOntologies();
 			//System.exit(1);
-			Thread.currentThread().interrupt();
-		}
+			//Thread.currentThread().interrupt();
+		//}
 		man.clearOntologies();
 	}
 	
